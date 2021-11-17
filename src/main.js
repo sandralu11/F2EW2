@@ -4,7 +4,11 @@ import router from './router'
 import store from './store'
 import { Popup } from 'vant';
 import 'vant/lib/popup/style'
+import 'leaflet.markercluster/dist/MarkerCluster.css'
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
+import Vue2LeafletMarkerCluster from 'vue2-leaflet-markercluster';
 
+Vue.component('v-marker-cluster',Vue2LeafletMarkerCluster);
 Vue.use(Popup);
 
 

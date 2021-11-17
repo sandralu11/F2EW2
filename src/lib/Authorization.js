@@ -5,7 +5,7 @@ import jsSHA from "jssha";
 const getApi ={
     getStation(){
         return new Promise((resolve, reject) => {
-            let url=`https://ptx.transportdata.tw/MOTC/v2/Bike/Station/Taichung?$format=JSON`
+            let url=`https://ptx.transportdata.tw/MOTC/v2/Bike/Station/Taipei?$format=JSON`
             axios.get(
                 url,
                 {
@@ -22,7 +22,7 @@ const getApi ={
     },
     getAvailability(){
         return new Promise((resolve, reject) => {
-            let url=`https://ptx.transportdata.tw/MOTC/v2/Bike/Availability/Taichung?$format=JSON`
+            let url=`https://ptx.transportdata.tw/MOTC/v2/Bike/Availability/Taipei?$format=JSON`
             axios.get(
                 url,
                 {
