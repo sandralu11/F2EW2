@@ -2,6 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import { Popup } from 'vant';
+import 'vant/lib/popup/style'
+
+Vue.use(Popup);
+
 
 // 載入 vue2-leaflet，依照自己需要載入組件
 import { LMap, LTileLayer, LMarker, LPopup, LIcon } from "vue2-leaflet";

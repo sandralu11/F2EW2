@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <PopWrapper/>
    <!-- 初始化地圖設定 -->
     <l-map
       ref="myMap"
@@ -33,13 +34,19 @@
         </l-popup>
       </l-marker>
     </l-map>
+
   </div>
 </template>
 
 <script>
+import PopWrapper from '../components/popWrapper.vue'
 import getApi from '../lib/Authorization.js'
 export default {
   name: 'Home',
+  components: {
+    PopWrapper,
+  },
+  
   data() {
     return {
       // 模擬資料
@@ -91,6 +98,6 @@ export default {
         this.$refs.location.mapObject.openPopup();
       });
     });
-  }
+  },
 }
 </script>
