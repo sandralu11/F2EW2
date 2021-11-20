@@ -16,24 +16,31 @@
         <div>
             <ul class="btn-group">
                 <li >
-                    <i class='bx bx-smile'></i>
-                    <span>YouBike</span>
+                    <router-link to="/">
+                        <i class='bx bx-smile'></i>
+                        <span>YouBike</span>
+                    </router-link>
                 </li>
                 <li>
-                    <i class='bx bx-git-repo-forked'></i>
-                    <span>自行車路線</span>
+                    <router-link to="/bikeShape">
+                        <i class='bx bx-git-repo-forked'></i>
+                        <span>自行車路線</span>
+                    </router-link>
                 </li>
                 <li>
-                    <i class='bx bxs-image'></i>
-                    <span> 觀光景點</span>
+                    <router-link to="/scenicSpot">
+                        <i class='bx bxs-image'></i>
+                        <span> 觀光景點</span>
+                    </router-link>
                 </li>
                 <li>
-                    <i class='bx bx-restaurant'></i>
-                    <span>餐廳</span>
+                    <router-link to="/restaurant">
+                        <i class='bx bx-restaurant'></i>
+                        <span>餐廳</span>
+                    </router-link>
                 </li>
             </ul>
         </div>
-
     </div>
 </template>
 
