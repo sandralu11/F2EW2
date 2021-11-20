@@ -9,6 +9,7 @@
         :address="item.Address"
         :phone="item.Phone"
         :city="item.City"
+        :positon="[item.Position.PositionLat,item.Position.PositionLon]"
     />
 </van-popup>
     <!-- 初始化地圖設定 -->

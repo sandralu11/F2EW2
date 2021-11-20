@@ -3,14 +3,14 @@
         <ul>
             <li>{{name}}</li>
             <li>
-                <!-- <span>車行方向：{{direction}}</span> -->
-                <span>車道長度：{{length}}</span>
+                <span>車行方向：{{direction || "無提供"}}</span> &nbsp &nbsp
+                <span>車道長度：{{length}}km</span>
             </li>
             <li>
-                <span class="green">起</span> &nbsp {{start}}
+                <span class="green">起</span> &nbsp {{start || "無提供"}}
             </li>
             <li>
-                <span class="green">迄</span> &nbsp {{end}}
+                <span class="green">迄</span> &nbsp {{end || "無提供"}}
             </li>
         </ul>
     </div>
@@ -20,7 +20,7 @@
 export default {
     props:{
         name:String,
-        // direction:String,
+        direction:String,
         length:Number,
         start:String,
         end:String,

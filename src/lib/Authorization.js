@@ -71,6 +71,23 @@ const getApi ={
             }); 
         });
     },
+    getRestaurant(){
+        return new Promise((resolve, reject) => {
+            let url=`https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/Taipei?$top=30&$format=JSON`
+            axios.get(
+                url,
+                {
+                    headers: getAuthorizationHeader()
+                }
+                )
+            .then(function (response) {
+                resolve(response.data) 
+            })
+            .catch(function (error) {
+                reject(error)
+            }); 
+        });
+    },
 
 }
 
