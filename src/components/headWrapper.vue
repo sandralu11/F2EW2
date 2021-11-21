@@ -7,15 +7,19 @@
                     <span class="webName"> GoGoBike</span>
                 </li>
                 <li class="search-box">
-                    <select name="mySearch" id="mySearch" placeholder="搜尋地點">
-                        <option value="">--Please choose an option--</option>
-                        <option value="dog">Dog</option>
-                        <option value="cat">Cat</option>
-                        <option value="hamster">Hamster</option>
-                        <option value="parrot">Parrot</option>
-                        <option value="spider">Spider</option>
-                        <option value="goldfish">Goldfish</option>
-                    </select>
+                    <input type="text" list="datalist" placeholder="搜尋地點">
+                    <datalist id="datalist" >
+                        <option value="台北">台北</option>
+                        <option value="新北">新北</option>
+                        <option value="苗栗">苗栗</option>
+                        <option value="新竹">新竹</option>
+                        <option value="台中">台中</option>
+                        <option value="嘉義">嘉義</option>
+                        <option value="台南">台南</option>
+                        <option value="高艘">高艘</option>
+                        <option value="屏東">屏東</option>
+                        <option value="金門">金門</option>
+                    </datalist>
                 </li>
             </ul>
         </div>
