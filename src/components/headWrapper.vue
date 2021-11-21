@@ -7,9 +7,15 @@
                     <span class="webName"> GoGoBike</span>
                 </li>
                 <li class="search-box">
-                    <input type="search" name="mySearch" id="mySearch" placeholder="搜尋地點"  @click="showPopup">
-                    <van-popup v-model="show" position="top" :style="{ height: '30%' }" closeable>内容</van-popup>
-                    <i class='bx bx-search'></i>
+                    <select name="mySearch" id="mySearch" placeholder="搜尋地點">
+                        <option value="">--Please choose an option--</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="parrot">Parrot</option>
+                        <option value="spider">Spider</option>
+                        <option value="goldfish">Goldfish</option>
+                    </select>
                 </li>
             </ul>
         </div>

@@ -21,16 +21,14 @@
     <l-tile-layer :url="url" :attribution="attribution" />    
     <v-marker-cluster :options="{disableClusteringAtZoom:15}" >
     <!-- 創建標記點 -->
-    <!-- <l-marker :lat-lng="[item.StationPosition.PositionLat, item.StationPosition.PositionLon]" v-for="item in station" :key="item.StationUID"
-        @click="pop(item)"
-    > -->
+    <l-marker :lat-lng="[item.Position.PositionLat, item.Position.PositionLon]" v-for="item in Restaurant" :key="item.RestaurantID">
         <!-- 標記點樣式判斷 -->
-        <!-- <l-icon
+        <l-icon
         :icon-url="icon.type.bike"
         :icon-size="icon.iconSize"
         :icon-anchor="icon.iconAnchor"
         />
-    </l-marker> -->
+    </l-marker>
     </v-marker-cluster>
 </l-map>
 </div>
@@ -57,7 +55,7 @@ return {
     icon: {
     type: {
         bike:
-        "img/youbike.png",
+        "img/restauranticon.png",
     },    
     iconSize: [60, 65],
     iconAnchor: [30, 65],
