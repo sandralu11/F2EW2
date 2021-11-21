@@ -8,6 +8,7 @@
         :length="item.CyclingLength"
         :start="item.RoadSectionStart"
         :end="item.RoadSectionEnd"
+        :geometry="item.Geometry"
         :callback="clickitem"
       />
     </van-popup>
@@ -22,16 +23,16 @@
       <l-tile-layer :url="url" :attribution="attribution" />    
       <v-marker-cluster :options="{disableClusteringAtZoom:15}" >
         <!-- 創建標記點 -->
-        <!-- <l-marker :lat-lng="[item.StationPosition.PositionLat, item.StationPosition.PositionLon]" v-for="item in station" :key="item.StationUID"
+        <l-marker :lat-lng="[item.StationPosition.PositionLat, item.StationPosition.PositionLon]" v-for="item in station" :key="item.StationUID"
           @click="pop(item)"
-        > -->
+        >
           <!-- 標記點樣式判斷 -->
-          <!-- <l-icon
+          <l-icon
             :icon-url="icon.type.bike"
             :icon-size="icon.iconSize"
             :icon-anchor="icon.iconAnchor"
           /> -->
-        <!-- </l-marker> -->
+        </l-marker>
       </v-marker-cluster>
       
     </l-map>

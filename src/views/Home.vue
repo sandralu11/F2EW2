@@ -35,6 +35,9 @@
         </l-marker>
       </v-marker-cluster>
       
+        <!-- 創建標記點 -->
+        <l-marker :lat-lng="Now" v-if="Now.length > 1">
+        </l-marker>
     </l-map>
   </div>
 </template>
@@ -62,11 +65,14 @@ export default {
         type: {
           bike:
             "img/youbike.png",
+          now:
+            ""
         },    
         iconSize: [60, 65],
         iconAnchor: [30, 65],
       },
       show:false,
+      Now:[]
     };
   },
   methods:{
@@ -94,11 +100,10 @@ export default {
     })
     // 等地圖創建後執行
     this.$nextTick(() => {
-      // 獲得目前位置
       navigator.geolocation.getCurrentPosition(position => {
         const p = position.coords;
-        // 將中心點設為目前的位置
-        this.center = [p.latitude, p.longitude];
+        this.$refs.myMap.mapObject.flyTo([p.latitude, p.longitude],18);
+        this.Now = [p.latitude, p.longitude];
       });
     });
   },
